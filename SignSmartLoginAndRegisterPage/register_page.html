@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="login_style.css">
+    <!-- <link rel="stylesheet" href="register_style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="animation-container">
+        <div class="animation-elements"></div>
+    </div>
+
+    <h1>SignSmart</h1>
+
+    <div class="description">
+        <h3 style="font-weight: 100;">"SignSmart" allows users to upload a contract in various formats (document,
+            image, text, or link) for
+            analysis. The AI technology will thoroughly examine the contract, identifying potentially unfavorable
+            clauses for
+            the client. It will then provide a clear and concise summary of the contract's key terms, including an
+            outline of
+            <p>
+                Additionally, the system will offer recommendations for better alternative plans, ensuring that the user
+                has
+                access
+                to more favorable options. Furthermore, it will enable users to compare two or three different contracts
+                side by
+                side, allowing for a detailed comparison of terms and conditions to facilitate an informed
+                decision-making
+                process.
+                what the client will receive under the agreement.
+            </p>
+        </h3>
+    </div>
+
+    <div class="login">
+        <button onclick="document.getElementById('id01').style.display='block'">Register</button>
+    </div>
+    <h3 style="text-align: center; font-weight: 100;">You already have an account? Click here to <a
+            href="login_page.html">log in</a>.</h3>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="image2.jpg" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="email"><b>E-mail</b></label>
+                <input type="text" placeholder="Enter E-mail" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Register</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        var modal = document.getElementById('id01');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        let maxElements = 20;
+        let count = 0;
+
+        let interval = setInterval(() => {
+            if (count >= maxElements) {
+                clearInterval(interval);
+                return;
+            }
+
+            let elem = document.createElement("div");
+            elem.classList.add("animation-elements");
+            elem.style.left = Math.random() * window.innerWidth + "px";
+
+            let fallDuration = Math.random() * 3 + 4;
+            elem.style.animationDuration = `${fallDuration}s, 5s`;
+
+            elem.style.animationDelay = `${Math.random() * 2}s`;
+
+            document.body.appendChild(elem);
+            count++;
+        }, 300);
+    </script>
+
+</body>
+
+</html>
