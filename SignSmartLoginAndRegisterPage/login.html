@@ -4,11 +4,11 @@
 <head>
   <link rel="stylesheet" href="login_style.css">
   <link rel="stylesheet" href="register_style.css">
+  <link rel="stylesheet" src="fall.js">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-
   <h1>SignSmart</h1>
 
   <div class="description">
@@ -30,7 +30,7 @@
     <button onclick="document.getElementById('id01').style.display='block'">Login</button>
   </div>
   <h3 style="text-align: center; font-weight: 100;">You don't have an account? Click here to <a
-      href="register_page.html">register</a>.</h3>
+      href="register.html">register</a>.</h3>
 
   <div id="id01" class="modal">
 
@@ -42,25 +42,26 @@
       </div>
 
       <div class="container">
-        <label for="uname"><b>Username</b></label>
+        <label for="uname" style="color: white;"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="uname" required>
 
-        <label for="psw"><b>Password</b></label>
+        <label for="psw" style="color: white;"><b>Password</b></label>
         <input type="password" placeholder="Enter Password" name="psw" required>
 
         <button type="submit">Login</button>
-        <label>
+        <label style="color: white;">
           <input type="checkbox" checked="checked" name="remember"> Remember me
         </label>
       </div>
 
-      <div class="container" style="background-color:#f1f1f1">
+      <div class="container">
         <button type="button" onclick="document.getElementById('id01').style.display='none'"
           class="cancelbtn">Cancel</button>
       </div>
     </form>
   </div>
 
+  <script src="fall.js"></script>
   <script>
 
     var modal = document.getElementById('id01');
