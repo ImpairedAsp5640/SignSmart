@@ -1,3 +1,7 @@
+    body {
+      background-color: #343541;
+    }
+    
     input[type=text],
     input[type=password] {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +15,7 @@
 
     button {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0096FF;
+      background-color: rgb(16, 163, 127);
       color: white;
       padding: 14px 20px;
       margin: 8px 0;
@@ -104,6 +108,7 @@
     h1 {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       text-align: center;
+      color:#ececf1;
     }
 
     img {
@@ -121,17 +126,17 @@
     .description {
       padding-left: 5%;
       padding-right: 5%;
-      background-color: #d3d3d3;
+      background-color: #444654;
       color: #888;
       border-radius: 8px;
       width: 30%;
       margin: auto;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      box-shadow:1px black 1px grey 1px white;
     }
     
     .description h3 {
-      background-color: #d3d3d3;
+      color: #8e8ea0;
+      background-color: #444654;
       padding: 10px 10px;
       display: inline-block;
       border-radius: 8px;
@@ -143,6 +148,16 @@
       padding-right: 10px;
     }
 
+    h3 {
+      color: #ececf1;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    a {
+      color: rgb(16, 163, 127);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
     @-webkit-keyframes animatezoom {
       from {
         -webkit-transform: scale(0)
