@@ -211,6 +211,10 @@
     }
 
     @media screen and (max-width: 300px) {
+      body {
+        overflow: auto;
+      }
+
       span.psw {
         display: block;
         float: none;
