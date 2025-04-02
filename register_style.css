@@ -1,0 +1,48 @@
+        body {
+            overflow: hidden;
+        }
+
+        .animation-elements {
+            top:-50px;
+            z-index: -10;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            opacity: 0.8;
+            animation: fall 10s linear ease-in-out 1, bgd-animation 3s infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(150vh) rotate(360deg);
+                opacity: 0.7;
+            }
+        }
+
+
+        @keyframes bgd-animation {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            75% {
+                background-color: green;
+            }
+
+            100% {
+                background-color: red;
+            }
+        }

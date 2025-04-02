@@ -3,14 +3,17 @@
 
 <head>
     <link rel="stylesheet" href="login_style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-
-    </style>
+  <link rel="stylesheet" href="register_style.css">
+  <link rel="stylesheet" href="fall.css">
+  <script src="fall.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="icon" type="image/png" href="sign.png">
 </head>
 
 <body>
+    <div class="animation-container">
+        <div class="animation-elements"></div>
+    </div>
 
     <h1>SignSmart</h1>
 
@@ -20,7 +23,7 @@
             analysis. The AI technology will thoroughly examine the contract, identifying potentially unfavorable
             clauses for
             the client. It will then provide a clear and concise summary of the contract's key terms, including an
-            outline of what the client will receive under the agreement.
+            outline of
             <p>
                 Additionally, the system will offer recommendations for better alternative plans, ensuring that the user
                 has
@@ -38,13 +41,12 @@
     <div class="login">
         <button onclick="document.getElementById('id01').style.display='block'">Register</button>
     </div>
-
     <h3 style="text-align: center; font-weight: 100;">You already have an account? Click here to <a
             href="login.html">log in</a>.</h3>
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="" method="post">
+        <form class="modal-content animate" action="register.php" method="post">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
@@ -52,28 +54,60 @@
             </div>
 
             <div class="container">
-                <label for="uname" style="color: white;"><b>Username</b></label>
+                <label for="uname" style="color: #ffffff"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" required>
 
-                <label for="email" style="color: white;"><b>E-mail</b></label>
+                <label for="email" style="color: #ffffff"><b>E-mail</b></label>
                 <input type="text" placeholder="Enter E-mail" name="email" required>
 
-                <label for="psw" style="color: white;"><b>Password</b></label>
+                <label for="psw" style="color: #ffffff"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="password" required>
 
                 <button type="submit">Register</button>
-                <label style="color: white;">
+                <label style="color: #ffffff">
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
 
-            <div class="container">
+            <div class="container" style="background-color:#343541">
                 <button type="button" onclick="document.getElementById('id01').style.display='none'"
                     class="cancelbtn">Cancel</button>
             </div>
         </form>
     </div>
-    <script src="fall.js"></script>
+
+    <script>
+
+        var modal = document.getElementById('id01');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        let maxElements = 20;
+        let count = 0;
+
+        let interval = setInterval(() => {
+            if (count >= maxElements) {
+                clearInterval(interval);
+                return;
+            }
+
+            let elem = document.createElement("div");
+            elem.classList.add("animation-elements");
+            elem.style.left = Math.random() * window.innerWidth + "px";
+
+            let fallDuration = Math.random() * 3 + 4;
+            elem.style.animationDuration = `${fallDuration}s, 5s`;
+
+            elem.style.animationDelay = `${Math.random() * 2}s`;
+
+            document.body.appendChild(elem);
+            count++;
+        }, 300);
+    </script>
 
 </body>
 

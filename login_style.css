@@ -211,10 +211,6 @@
     }
 
     @media screen and (max-width: 300px) {
-      body {
-        overflow: auto;
-      }
-
       span.psw {
         display: block;
         float: none;
@@ -224,4 +220,9 @@
         width: 100%;
       }
     }
-    
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch;
+  }
+}

@@ -4,12 +4,14 @@ function createFallingElement(type) {
 
     element.src = type === "sign" ? "sign.png" : "folder-icon.png";
 
-    element.style.left = Math.random() * window.innerWidth + "px";
-    element.style.animationDuration = `${Math.random() * 3 + 3}s`;
+    element.style.left = Math.random() * (window.innerWidth - 50) + "px";
+
+    const duration = Math.random() * 3 + 3;
+    element.style.animationDuration = `${duration}s`;
 
     document.body.appendChild(element);
 
-    setTimeout(() => element.remove(), 5000);
+    setTimeout(() => element.remove(), duration * 1000);
 }
 
 setInterval(() => {
